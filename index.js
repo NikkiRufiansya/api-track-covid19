@@ -13,8 +13,4 @@ const covid = require('novelcovid');
 })()
 
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
-
-
-// app.get('/', (req, res) => res.send('<h2> Hello World! </h2>'));
-// app.listen(PORT, () => console.log(`app listening on port ${PORT}`))
+app.listen(PORT, () => console.log(`app listening on port ${PORT}`))
