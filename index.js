@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
                 All Country : appku19.herokuapp.com/all <br><br>\
                 Country Indonesia : appku19.herokuapp.com/indonesia <br><br>\
                 Website : on progress<br><br>\
-                by : Backend(Nikky), Frontend(VerryAnto)"
+                by : Backend(Nikky), Frontend(Verry)"
     return res.send(doc);
 })
 
@@ -26,8 +26,7 @@ app.get('/indonesia', function (req, res) {
 app.get('/all', function (req, res) {
     (async () => {
         let sortedCountries = await covid.getCountry({sort: 'recovered'});
-        let sortedStates = await covid.getState({sort: 'deaths'});
-            return res.json([sortedCountries,sortedStates]);
+            return res.json(sortedCountries);
     })()
 })
 
