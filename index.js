@@ -19,7 +19,7 @@ app.get('/indonesia', function (req, res) {
  
         let specificCountry = await covid.getCountry({country: 'Indonesia'});
        
-        return res.json(specificCountry)
+        return res.json({result:[specificCountry]})
     })()
 })
 
