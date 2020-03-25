@@ -10,6 +10,7 @@ app.get('/', function (req, res) {
                 All Country : appku19.herokuapp.com/all <br><br>\
                 Country Indonesia : appku19.herokuapp.com/indonesia <br><br>\
                 Country Parameter : appku19.herokuapp.com/countries/pilih_negara_terserah_lu <br><br>\
+                Country Parameter : appku19.herokuapp.com/getAll <br><br>\
                 Website : on progress<br><br>\
                 by : Backend(Nikky), Frontend(Verry)"
     return res.send(doc);
@@ -40,6 +41,14 @@ app.get('/countries/:country', function (req, res) {
     })()
 })
 
+app.get('/getAll', function (req, res) {
+    (async () => {
+ 
+        let all = await covid.getAll();
+       
+        return res.json(all)
+    })()
+})
 
 
 app.listen(PORT, () => console.log(`app listening on port ${PORT}`))
