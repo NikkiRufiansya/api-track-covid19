@@ -6,7 +6,7 @@ const covid = require('novelcovid');
 
  
 app.get('/', function (req, res) {
-    let doc = " Dokumentasi Resy API : <br><br>\
+    let doc = " Dokumentasi Rest API : <br><br>\
                 All Country : appku19.herokuapp.com/all <br><br>\
                 Country Indonesia : appku19.herokuapp.com/indonesia <br><br>\
                 Website : on progress<br><br>\
@@ -27,6 +27,15 @@ app.get('/all', function (req, res) {
     (async () => {
         let sortedCountries = await covid.getCountry({sort: 'recovered'});
             return res.json(sortedCountries);
+    })()
+})
+
+app.get('/countries/:country', function (req, res) {
+    (async () => {
+ 
+        let specificCountry = await covid.getCountry({country: req.params.country});
+       
+        return res.json(specificCountry)
     })()
 })
 
