@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
                 All Cases, Recovered, & Deaths in the world : appku19.herokuapp.com/getAll <br><br>\
                 Historical Parameter : appku19.herokuapp.com/getHistorical/{country}' <br><br>\
                 Province Parameter : appku19.herokuapp.com//getProvince/{params}'\
-                params is : (semua, aceh, banten, jatim, jateng, jabar, lampung, ntb)\
+                params is : (semua, aceh, banten, jatim, jateng, jabar, lampung, ntb)<br><br>\
                 Website : on progress<br><br>\
                 by : Backend(Nikky), Frontend(Verry)"
     return res.send(doc);
