@@ -12,7 +12,7 @@ app.get('/', function (req, res) {
                 Historical Parameter : appku19.herokuapp.com/getHistorical/{country}' <br><br>\
                 Province Parameter : appku19.herokuapp.com//getProvince/{params}<br>'\
                 params is : (semua, aceh, banten, jatim, jateng, jabar, lampung, ntb)<br><br>\
-                Website : on progress<br><br>\
+                Website : on progress <br><br>\
                 by : Backend(Nikky), Frontend(Verry)"
     return res.send(doc);
 })
