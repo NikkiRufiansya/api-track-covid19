@@ -1,1 +1,11 @@
 # api-track-covid19
+Dokumentasi Rest API : <br><br>\
+                All Country : appku19.herokuapp.com/all <br><br>\
+                Country Indonesia : appku19.herokuapp.com/indonesia <br><br>\
+                Country Parameter : appku19.herokuapp.com/countries/{country} <br><br>\
+                All Cases, Recovered, & Deaths in the world : appku19.herokuapp.com/getAll <br><br>\
+                Historical Parameter : appku19.herokuapp.com/getHistorical/{country}' <br><br>\
+                Province Parameter : appku19.herokuapp.com//getProvince/{params}'\
+                params is : (semua, aceh, banten, jatim, jateng, jabar, lampung, ntb)<br><br>\
+                Website : on progress<br><br>\
+                by : Backend(Nikky), Frontend(Verry)
