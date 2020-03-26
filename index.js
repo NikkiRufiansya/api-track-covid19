@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 2000
 const covid = require('novelcovid');
  
 app.get('/', function (req, res) {
-    let doc = " Dokumentasi Rest API Covid-19: <br><br>\
+    let doc = " Dokumentasi Rest API Covid-19 : <br><br>\
                 All Country : appku19.herokuapp.com/all <br><br>\
                 Country Indonesia : appku19.herokuapp.com/indonesia <br><br>\
                 Country Parameter : appku19.herokuapp.com/countries/{country} <br><br>\
