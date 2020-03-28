@@ -17,6 +17,7 @@ app.get('/', function (req, res) {
                 params is : (semua, aceh, banten, jatim, jateng, jabar, lampung, ntb)<br><br>\
                 Website : https://covid19-info-id.netlify.com/ <br><br>\
                 by : Backend(Nikky), Frontend(Verry)"
+                
     return res.send(doc);
 })
 
