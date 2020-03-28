@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const PORT = process.env.PORT || 2000
+const PORT = process.env.PORT || 8000
 const covid = require('novelcovid');
  
 app.get('/', function (req, res) {
@@ -64,4 +64,10 @@ app.get('/getProvince/:params', function (req, res) {
         return res.json(historical)
     })()
 })
+
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "appku19.herokuapp.com"); // update to match the domain you will make the request from
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
 app.listen(PORT, () => console.log(`app listening on port ${PORT}`))
