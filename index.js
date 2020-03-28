@@ -2,7 +2,10 @@ const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 8000
 const covid = require('novelcovid');
- 
+const cors = require("cors");
+
+
+app.use(cors());
 app.get('/', function (req, res) {
     let doc = " Dokumentasi Rest API Covid-19 : <br><br>\
                 All Country : appku19.herokuapp.com/all<br><br>\
@@ -65,9 +68,5 @@ app.get('/getProvince/:params', function (req, res) {
     })()
 })
 
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "appku19.herokuapp.com"); // update to match the domain you will make the request from
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-  });
+
 app.listen(PORT, () => console.log(`app listening on port ${PORT}`))
