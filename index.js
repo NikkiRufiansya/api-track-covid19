@@ -13,11 +13,10 @@ app.get('/', function (req, res) {
                 Country Parameter : appku19.herokuapp.com/countries/{country} <br><br>\
                 All Cases, Recovered, & Deaths in the world : appku19.herokuapp.com/getAll <br><br>\
                 Historical Parameter : appku19.herokuapp.com/getHistorical/{country}' <br><br>\
-                Province Parameter : appku19.herokuapp.com//getProvince/{params}<br>'\
-                params is : (semua, aceh, banten, jatim, jateng, jabar, lampung, ntb)<br><br>\
+                Province : appku19.herokuapp.com/getAllProvince/<br><br>\
                 Website : https://covid19-info-id.netlify.com/ <br><br>\
                 by : Backend(Nikky), Frontend(Verry)"
-                
+
     return res.send(doc);
 })
 
@@ -64,10 +63,21 @@ app.get('/getHistorical/:country', function (req, res) {
 app.get('/getProvince/:params', function (req, res) {
     (async () => {
  
-        let historical = await covid.getProv({country: req.params.params});  
-        return res.json(historical)
+        let prov = await covid.getProv({country: req.params.params});  
+        return res.json(prov)
     })()
 })
 
+app.get('/getProvince/', function (req, res) {
+   
+});
+
+app.get('/getAllProvince/', function (req, res) {
+    (async () => {
+ 
+        let AllProv = await covid.getProv();  
+        return res.json(AllProv)
+    })()
+})
 
 app.listen(PORT, () => console.log(`app listening on port ${PORT}`))
