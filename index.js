@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
                 Historical Parameter : appku19.herokuapp.com/getHistorical/{country}' <br><br>\
                 Province : appku19.herokuapp.com/getAllProvince/<br><br>\
                 Website : https://covid19-info-id.netlify.com/ <br><br>\
-                by : Backend(Nikky), Frontend(Verry)"
+                by : Backend(Nikky), Frontend(Verry),   "
 
     return res.send(doc);
 })
